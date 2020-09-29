@@ -21,9 +21,9 @@ try:
     username = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.NAME, "username"))
     )
-    username.send_keys("mohcine.bouzalim2016@gmail.com")
+    username.send_keys("email_or_username")#replace with your email or your username
     password = driver.find_element_by_name("password")
-    password.send_keys("mohcine@1997")
+    password.send_keys("pswd")#replace with your password
     button_login = driver.find_element_by_css_selector("#loginForm > div > div:nth-child(3) > button")
     button_login.click()
     sleep(3)
@@ -42,7 +42,7 @@ try:
         except:
             break
 
-    hashtag_list = ["travel", "london"]
+    hashtag_list = ["tag1", "tag2"]#write your preferred tags on this list
     prev_user_list = [] #if it's the first time you run it, use this line and comment the two below
     #prev_user_list = pd.read_csv("the_last_csv_file_here").iloc[:,1:2]
     #prev_user_list = list(prev_user_list['0'])
